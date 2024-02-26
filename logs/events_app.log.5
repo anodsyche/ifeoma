@@ -1,0 +1,113 @@
+2024-02-26 11:05:33,157 INFO: API startup [in /Users/oanosike/ifeoma/app/__init__.py:32]
+2024-02-26 11:05:36,315 ERROR: Exception on / [GET] [in /Users/oanosike/.local/share/virtualenvs/ifeoma-k49F0DIC/lib/python3.11/site-packages/flask/app.py:828]
+Traceback (most recent call last):
+  File "/Users/oanosike/.local/share/virtualenvs/ifeoma-k49F0DIC/lib/python3.11/site-packages/flask/app.py", line 870, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/oanosike/.local/share/virtualenvs/ifeoma-k49F0DIC/lib/python3.11/site-packages/flask/app.py", line 844, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/Users/oanosike/.local/share/virtualenvs/ifeoma-k49F0DIC/lib/python3.11/site-packages/flask/app.py", line 453, in raise_routing_exception
+    raise request.routing_exception  # type: ignore[misc]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/oanosike/.local/share/virtualenvs/ifeoma-k49F0DIC/lib/python3.11/site-packages/flask/ctx.py", line 362, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/oanosike/.local/share/virtualenvs/ifeoma-k49F0DIC/lib/python3.11/site-packages/werkzeug/routing/map.py", line 624, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/oanosike/.local/share/virtualenvs/ifeoma-k49F0DIC/lib/python3.11/site-packages/flask/app.py", line 1463, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/oanosike/.local/share/virtualenvs/ifeoma-k49F0DIC/lib/python3.11/site-packages/flask/app.py", line 872, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/oanosike/.local/share/virtualenvs/ifeoma-k49F0DIC/lib/python3.11/site-packages/flask/app.py", line 755, in handle_user_exception
+    return self.handle_http_exception(e)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/oanosike/.local/share/virtualenvs/ifeoma-k49F0DIC/lib/python3.11/site-packages/flask/app.py", line 730, in handle_http_exception
+    return self.ensure_sync(handler)(e)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/oanosike/ifeoma/app/errors.py", line 6, in not_found_error
+    return render_template('404.html'), 404
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/oanosike/.local/share/virtualenvs/ifeoma-k49F0DIC/lib/python3.11/site-packages/flask/templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/oanosike/.local/share/virtualenvs/ifeoma-k49F0DIC/lib/python3.11/site-packages/jinja2/environment.py", line 1081, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/oanosike/.local/share/virtualenvs/ifeoma-k49F0DIC/lib/python3.11/site-packages/jinja2/environment.py", line 1010, in get_template
+    return self._load_template(name, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/oanosike/.local/share/virtualenvs/ifeoma-k49F0DIC/lib/python3.11/site-packages/jinja2/environment.py", line 969, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/oanosike/.local/share/virtualenvs/ifeoma-k49F0DIC/lib/python3.11/site-packages/jinja2/loaders.py", line 125, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/oanosike/.local/share/virtualenvs/ifeoma-k49F0DIC/lib/python3.11/site-packages/flask/templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/oanosike/.local/share/virtualenvs/ifeoma-k49F0DIC/lib/python3.11/site-packages/flask/templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: 404.html
+2024-02-26 11:05:36,484 ERROR: Exception on /favicon.ico [GET] [in /Users/oanosike/.local/share/virtualenvs/ifeoma-k49F0DIC/lib/python3.11/site-packages/flask/app.py:828]
+Traceback (most recent call last):
+  File "/Users/oanosike/.local/share/virtualenvs/ifeoma-k49F0DIC/lib/python3.11/site-packages/flask/app.py", line 870, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/oanosike/.local/share/virtualenvs/ifeoma-k49F0DIC/lib/python3.11/site-packages/flask/app.py", line 844, in dispatch_request
+    self.raise_routing_exception(req)
+  File "/Users/oanosike/.local/share/virtualenvs/ifeoma-k49F0DIC/lib/python3.11/site-packages/flask/app.py", line 453, in raise_routing_exception
+    raise request.routing_exception  # type: ignore[misc]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/oanosike/.local/share/virtualenvs/ifeoma-k49F0DIC/lib/python3.11/site-packages/flask/ctx.py", line 362, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/oanosike/.local/share/virtualenvs/ifeoma-k49F0DIC/lib/python3.11/site-packages/werkzeug/routing/map.py", line 624, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/oanosike/.local/share/virtualenvs/ifeoma-k49F0DIC/lib/python3.11/site-packages/flask/app.py", line 1463, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/oanosike/.local/share/virtualenvs/ifeoma-k49F0DIC/lib/python3.11/site-packages/flask/app.py", line 872, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/oanosike/.local/share/virtualenvs/ifeoma-k49F0DIC/lib/python3.11/site-packages/flask/app.py", line 755, in handle_user_exception
+    return self.handle_http_exception(e)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/oanosike/.local/share/virtualenvs/ifeoma-k49F0DIC/lib/python3.11/site-packages/flask/app.py", line 730, in handle_http_exception
+    return self.ensure_sync(handler)(e)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/oanosike/ifeoma/app/errors.py", line 6, in not_found_error
+    return render_template('404.html'), 404
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/oanosike/.local/share/virtualenvs/ifeoma-k49F0DIC/lib/python3.11/site-packages/flask/templating.py", line 149, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/oanosike/.local/share/virtualenvs/ifeoma-k49F0DIC/lib/python3.11/site-packages/jinja2/environment.py", line 1081, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/oanosike/.local/share/virtualenvs/ifeoma-k49F0DIC/lib/python3.11/site-packages/jinja2/environment.py", line 1010, in get_template
+    return self._load_template(name, globals)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/oanosike/.local/share/virtualenvs/ifeoma-k49F0DIC/lib/python3.11/site-packages/jinja2/environment.py", line 969, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/oanosike/.local/share/virtualenvs/ifeoma-k49F0DIC/lib/python3.11/site-packages/jinja2/loaders.py", line 125, in load
+    source, filename, uptodate = self.get_source(environment, name)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/oanosike/.local/share/virtualenvs/ifeoma-k49F0DIC/lib/python3.11/site-packages/flask/templating.py", line 65, in get_source
+    return self._get_source_fast(environment, template)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/oanosike/.local/share/virtualenvs/ifeoma-k49F0DIC/lib/python3.11/site-packages/flask/templating.py", line 99, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: 404.html

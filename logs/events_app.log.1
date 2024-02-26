@@ -1,0 +1,130 @@
+2024-02-26 15:08:04,022 ERROR: Exception on /api/users/ [GET] [in /Users/oanosike/.local/share/virtualenvs/ifeoma-k49F0DIC/lib/python3.11/site-packages/flask/app.py:828]
+Traceback (most recent call last):
+  File "/Users/oanosike/.local/share/virtualenvs/ifeoma-k49F0DIC/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1960, in _exec_single_context
+    self.dialect.do_execute(
+  File "/Users/oanosike/.local/share/virtualenvs/ifeoma-k49F0DIC/lib/python3.11/site-packages/sqlalchemy/engine/default.py", line 924, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.OperationalError: no such table: user
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/oanosike/.local/share/virtualenvs/ifeoma-k49F0DIC/lib/python3.11/site-packages/flask/app.py", line 1463, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/oanosike/.local/share/virtualenvs/ifeoma-k49F0DIC/lib/python3.11/site-packages/flask/app.py", line 872, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/oanosike/.local/share/virtualenvs/ifeoma-k49F0DIC/lib/python3.11/site-packages/flask/app.py", line 870, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/oanosike/.local/share/virtualenvs/ifeoma-k49F0DIC/lib/python3.11/site-packages/flask/app.py", line 855, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/oanosike/ifeoma/app/api.py", line 8, in get_users
+    all_users = User.query.all()
+                ^^^^^^^^^^^^^^^^
+  File "/Users/oanosike/.local/share/virtualenvs/ifeoma-k49F0DIC/lib/python3.11/site-packages/sqlalchemy/orm/query.py", line 2672, in all
+    return self._iter().all()  # type: ignore
+           ^^^^^^^^^^^^
+  File "/Users/oanosike/.local/share/virtualenvs/ifeoma-k49F0DIC/lib/python3.11/site-packages/sqlalchemy/orm/query.py", line 2826, in _iter
+    result: Union[ScalarResult[_T], Result[_T]] = self.session.execute(
+                                                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/oanosike/.local/share/virtualenvs/ifeoma-k49F0DIC/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 2306, in execute
+    return self._execute_internal(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/oanosike/.local/share/virtualenvs/ifeoma-k49F0DIC/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 2191, in _execute_internal
+    result: Result[Any] = compile_state_cls.orm_execute_statement(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/oanosike/.local/share/virtualenvs/ifeoma-k49F0DIC/lib/python3.11/site-packages/sqlalchemy/orm/context.py", line 293, in orm_execute_statement
+    result = conn.execute(
+             ^^^^^^^^^^^^^
+  File "/Users/oanosike/.local/share/virtualenvs/ifeoma-k49F0DIC/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1408, in execute
+    return meth(
+           ^^^^^
+  File "/Users/oanosike/.local/share/virtualenvs/ifeoma-k49F0DIC/lib/python3.11/site-packages/sqlalchemy/sql/elements.py", line 513, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/oanosike/.local/share/virtualenvs/ifeoma-k49F0DIC/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1630, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/oanosike/.local/share/virtualenvs/ifeoma-k49F0DIC/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1839, in _execute_context
+    return self._exec_single_context(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/oanosike/.local/share/virtualenvs/ifeoma-k49F0DIC/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1979, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "/Users/oanosike/.local/share/virtualenvs/ifeoma-k49F0DIC/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 2335, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "/Users/oanosike/.local/share/virtualenvs/ifeoma-k49F0DIC/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1960, in _exec_single_context
+    self.dialect.do_execute(
+  File "/Users/oanosike/.local/share/virtualenvs/ifeoma-k49F0DIC/lib/python3.11/site-packages/sqlalchemy/engine/default.py", line 924, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such table: user
+[SQL: SELECT user.id AS user_id, user.username AS user_username, user.email AS user_email, user.password AS user_password, user.token_balance AS user_token_balance 
+FROM user]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2024-02-26 15:08:04,240 ERROR: Exception on /api/users/ [GET] [in /Users/oanosike/.local/share/virtualenvs/ifeoma-k49F0DIC/lib/python3.11/site-packages/flask/app.py:828]
+Traceback (most recent call last):
+  File "/Users/oanosike/.local/share/virtualenvs/ifeoma-k49F0DIC/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1960, in _exec_single_context
+    self.dialect.do_execute(
+  File "/Users/oanosike/.local/share/virtualenvs/ifeoma-k49F0DIC/lib/python3.11/site-packages/sqlalchemy/engine/default.py", line 924, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.OperationalError: no such table: user
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/oanosike/.local/share/virtualenvs/ifeoma-k49F0DIC/lib/python3.11/site-packages/flask/app.py", line 1463, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/oanosike/.local/share/virtualenvs/ifeoma-k49F0DIC/lib/python3.11/site-packages/flask/app.py", line 872, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/oanosike/.local/share/virtualenvs/ifeoma-k49F0DIC/lib/python3.11/site-packages/flask/app.py", line 870, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/oanosike/.local/share/virtualenvs/ifeoma-k49F0DIC/lib/python3.11/site-packages/flask/app.py", line 855, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/oanosike/ifeoma/app/api.py", line 8, in get_users
+    all_users = User.query.all()
+                ^^^^^^^^^^^^^^^^
+  File "/Users/oanosike/.local/share/virtualenvs/ifeoma-k49F0DIC/lib/python3.11/site-packages/sqlalchemy/orm/query.py", line 2672, in all
+    return self._iter().all()  # type: ignore
+           ^^^^^^^^^^^^
+  File "/Users/oanosike/.local/share/virtualenvs/ifeoma-k49F0DIC/lib/python3.11/site-packages/sqlalchemy/orm/query.py", line 2826, in _iter
+    result: Union[ScalarResult[_T], Result[_T]] = self.session.execute(
+                                                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/oanosike/.local/share/virtualenvs/ifeoma-k49F0DIC/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 2306, in execute
+    return self._execute_internal(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/oanosike/.local/share/virtualenvs/ifeoma-k49F0DIC/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 2191, in _execute_internal
+    result: Result[Any] = compile_state_cls.orm_execute_statement(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/oanosike/.local/share/virtualenvs/ifeoma-k49F0DIC/lib/python3.11/site-packages/sqlalchemy/orm/context.py", line 293, in orm_execute_statement
+    result = conn.execute(
+             ^^^^^^^^^^^^^
+  File "/Users/oanosike/.local/share/virtualenvs/ifeoma-k49F0DIC/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1408, in execute
+    return meth(
+           ^^^^^
+  File "/Users/oanosike/.local/share/virtualenvs/ifeoma-k49F0DIC/lib/python3.11/site-packages/sqlalchemy/sql/elements.py", line 513, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/oanosike/.local/share/virtualenvs/ifeoma-k49F0DIC/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1630, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/oanosike/.local/share/virtualenvs/ifeoma-k49F0DIC/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1839, in _execute_context
+    return self._exec_single_context(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/oanosike/.local/share/virtualenvs/ifeoma-k49F0DIC/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1979, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "/Users/oanosike/.local/share/virtualenvs/ifeoma-k49F0DIC/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 2335, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "/Users/oanosike/.local/share/virtualenvs/ifeoma-k49F0DIC/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1960, in _exec_single_context
+    self.dialect.do_execute(
+  File "/Users/oanosike/.local/share/virtualenvs/ifeoma-k49F0DIC/lib/python3.11/site-packages/sqlalchemy/engine/default.py", line 924, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such table: user
+[SQL: SELECT user.id AS user_id, user.username AS user_username, user.email AS user_email, user.password AS user_password, user.token_balance AS user_token_balance 
+FROM user]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
